@@ -44,3 +44,7 @@ func (model *SpikeMetadata) ValidateMetaData() error {
 	}
 	return nil
 }
+
+func (spikeInfo *SpikeInfo) Validate() bool {
+	return len(spikeInfo.Version) != 0
+}

@@ -38,8 +38,8 @@ func (s *FindAllNFTsService) FindAllNFTs() serializer.Response {
 		}
 	}
 
-	var res serializer.MoralisNFTs
-	err = json.Unmarshal(resp.Body(), &res)
+	var nfts serializer.MoralisNFTs
+	err = json.Unmarshal(resp.Body(), &nfts)
 	if err != nil {
 		return serializer.Response{
 			Code:  402,
@@ -50,7 +50,7 @@ func (s *FindAllNFTsService) FindAllNFTs() serializer.Response {
 	if resp.IsSuccess() {
 		return serializer.Response{
 			Code: 200,
-			Data: res,
+			Data: serializer.BuildNFTsResponse(nfts),
 		}
 	}
 
