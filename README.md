@@ -8,6 +8,8 @@ MORALIS_KEY=""
 PINATA_API_KEY=""
 PINATA_SECRET_KEY=""
 PINATA_GATEWAY=""
+
+LOG_FILE_PREFIX=""
 ```
 
 ##### 1.1 What is Pinata and how to get PINATA_X?
